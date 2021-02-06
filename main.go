@@ -1,9 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"github.com/labstack/echo/v4"
+	"net/http"
+)
 
 func main() {
-
-	fmt.Println("Hello Ajocard")
+	e := echo.New()
+	e.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Hello AjoCard")
+	})
+	e.Logger.Fatal(e.Start(":8090"))
 	
 }
