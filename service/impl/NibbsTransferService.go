@@ -10,6 +10,7 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 )
 
 type NibbsTransferService struct {}
@@ -18,9 +19,11 @@ type NibbsTransferService struct {}
 func (nibbs NibbsTransferService) CheckTransferServiceStatus() (dto.IndicatorDto, error) {
 	url := os.Getenv("NIP_LIVE_STATUS_URL")
 	maximumAllowedDefaultRate, _ := strconv.ParseFloat(os.Getenv("MAXIMUM_ALLOWED_DEFAULT_RATE"), 64)
-	res, err := http.Get(url)
+	httpClient := http.Client{Timeout: 5 * time.Second}
+	res, err := httpClient.Get(url)
 	if err != nil {
 		log.Panic("An error occurred. ", err.Error())
+		return dto.IndicatorDto{}, err
 	}
 	if res.StatusCode >= 200 && res.StatusCode < 300 {
 		var data map[string]map[string] string

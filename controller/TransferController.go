@@ -14,7 +14,7 @@ func CheckTransferStatus(c echo.Context) error {
 	response, err := transferService.CheckTransferServiceStatus()
 	if err != nil {
 		fmt.Println("An error occurred. ", err.Error())
-		return c.JSON(http.StatusOK, err.Error())
+		return c.String(http.StatusOK, err.Error())
 	}
 	return c.JSON(http.StatusOK, response)
 }
