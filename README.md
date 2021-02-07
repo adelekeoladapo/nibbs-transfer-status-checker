@@ -7,11 +7,11 @@ The maximum allowed rate is currently set to 1.7%, this rate can be changed in t
 It's a Golang project, it was developed using Echo (https://echo.labstack.com), a high performance, extensible, minimalist Go web framework.
 
 <b>Installation</b>
-<i>Requirements:</i>
+<p><i>Requirements:</i></p>
 Install Docker
 
-Step 1: Clone the project, natigate to the root directory on your terminal and run <b><i>docker build -t nibbs-transfer-status-checker .</i></b> to build the docker image.
-Step 2: Run <b><i>docker images</i></b> to see the list of all docker images on the machine, the image of this project should have been created.
-Step 3. Run <b><i>docker run -it -p 8090:8090 nibbs-transfer-status-checker</i></b> to run the generated image in a container. The image runs on port 8090 of the host machine.
+<p>Step 1: Clone the project, natigate to the root directory on your terminal and run <b><i>docker build -t nibbs-transfer-status-checker .</i></b> to build the docker image.</p>
+<p>Step 2: Run <b><i>docker images</i></b> to see the list of all docker images on the machine, the image of this project should have been created.</p>
+<p>Step 3. Run <b><i>docker run -it -p 8090:8090 nibbs-transfer-status-checker</i></b> to run the generated image in a container. The image runs on port 8090 of the host machine. </p>
 
-Lunch your browser or any REST client application and point to <b><i>http://localhost:8090/api/v1/transfer-status</i></b> to check real-time result.
+<p>Lunch your browser or any REST client application and point to <b><i>http://localhost:8090/api/v1/transfer-status</i></b> to check real-time result. </p>
