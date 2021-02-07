@@ -14,4 +14,4 @@ Install Docker</p>
 <p>Step 2: Run <b><i>docker images</i></b> to see the list of all docker images on the machine, the image of this project should have been created.</p>
 <p>Step 3. Run <b><i>docker run -it -p 8090:8090 nibbs-transfer-status-checker</i></b> to run the generated image in a container. The image runs on port 8090 of the host machine. </p>
 
-<p>Lunch your browser or any REST client application and point to <b><i>http://localhost:8090/api/v1/transfer-status</i></b> to check real-time result. </p>
+<p>Launch your browser or any REST client application and point to <b><i>http://localhost:8090/api/v1/transfer-status</i></b> to check real-time result. </p>
