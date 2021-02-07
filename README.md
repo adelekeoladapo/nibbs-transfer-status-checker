@@ -7,8 +7,8 @@ The maximum allowed rate is currently set to 1.7%, this rate can be changed in t
 It's a Golang project, it was developed using Echo (https://echo.labstack.com), a high performance, extensible, minimalist Go web framework.
 
 <b>Installation</b>
-<p><i>Requirements:</i></p>
-Install Docker
+<p><i>Requirements:</i>
+Install Docker</p>
 
 <p>Step 1: Clone the project, natigate to the root directory on your terminal and run <b><i>docker build -t nibbs-transfer-status-checker .</i></b> to build the docker image.</p>
 <p>Step 2: Run <b><i>docker images</i></b> to see the list of all docker images on the machine, the image of this project should have been created.</p>
